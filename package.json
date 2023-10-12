@@ -4,7 +4,8 @@
   "description": "Party Synergies Calculator for Lost Ark",
   "main": "none.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/DIDIx13/Party-Synergies-Calculator/issues"
   },
-  "homepage": "https://github.com/DIDIx13/Party-Synergies-Calculator#readme"
+  "homepage": "https://github.com/DIDIx13/Party-Synergies-Calculator#readme",
+  "devDependencies": {
+    "eslint": "^8.51.0"
+  }
 }
