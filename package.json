@@ -1,0 +1,22 @@
+{
+  "name": "party-synergies-calculator",
+  "version": "1.0.0",
+  "description": "Party Synergies Calculator for Lost Ark",
+  "main": "none.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIDIx13/Party-Synergies-Calculator.git"
+  },
+  "keywords": [
+    "lost-ark"
+  ],
+  "author": "Darwin Ameli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DIDIx13/Party-Synergies-Calculator/issues"
+  },
+  "homepage": "https://github.com/DIDIx13/Party-Synergies-Calculator#readme"
+}
