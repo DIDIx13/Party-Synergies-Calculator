@@ -14,24 +14,25 @@ jobs:
       - name: Validate HTML
         run: |
           npm install -g html-validator-cli
-          html-validator --file=index.html
+          for file in $(find . -name "*.html"); do
+            html-validator --file="$file"
+          done
         
       - name: Validate CSS
         run: |
           npm install -g css-validator
-          css-validator styles.css
+          for file in $(find . -name "*.css"); do
+            css-validator "$file"
+          done
         
       - name: Validate JavaScript
-        uses: jwalton/gh-find-current-pr@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: ESLint
         run: |
-          npm install
-          npm run lint
-
+          npm install -g eslint
+          eslint "**/*.js"
+          
       - name: Validate JSON
         run: |
           npm install -g jsonlint
-          jsonlint data.json
+          for file in $(find . -name "*.json"); do
+            jsonlint "$file"
+          done
