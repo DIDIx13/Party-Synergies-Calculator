@@ -24,6 +24,3 @@ jobs:
         push: true
         tags: |
           didix13/party-synergies-calculator:latest
-          # didix13/party-synergies-calculator:${{ github.ref }}
-      
-
