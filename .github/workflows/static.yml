@@ -22,15 +22,10 @@ jobs:
           css-validator styles.css
         
       - name: Validate JavaScript
-        uses: jwalton/gh-find-current-pr@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: ESLint
         run: |
-          npm install
-          npm run lint
-
+          npm install -g eslint
+          eslint "**/*.js"
+          
       - name: Validate JSON
         run: |
           npm install -g jsonlint
