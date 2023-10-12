@@ -17,9 +17,9 @@ jobs:
           file: 'index.html'
         
       - name: Validate CSS
-        uses: styled-components/css-validator-action@v1.0.0
-        with:
-          files: 'styles.css'
+        run: |
+          npm install -g css-validator
+          css-validator styles.css
         
       - name: Validate JavaScript
         uses: jwalton/gh-find-current-pr@v1
