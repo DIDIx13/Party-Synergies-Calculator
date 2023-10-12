@@ -25,9 +25,10 @@ jobs:
         uses: jwalton/gh-find-current-pr@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: ESLint
         run: |
-          npm ci
+          npm install
           npm run lint
 
       - name: Validate JSON
