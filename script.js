@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
 
     // Update Last Updated
-    const lastUpdated = document.getElementById('lastUpdated');
+    const lastUpdated = document.getElementById("lastUpdated");
     lastUpdated.textContent = getFormattedDate();
 
     fetchData()
         .then(data => createCheckboxes(data))
-        .catch(error => console.error('Fetch error: ', error));
+        .catch(error => console.error("Fetch error: ", error));
 
 });
 
@@ -23,15 +23,15 @@ async function fetchData() {
     
     try {
         // Try to fetch local data first
-        response = await fetch('./data.json');
+        response = await fetch("./data.json");
         if (!response.ok) {
-            throw new Error('Local fetch not OK');
+            throw new Error("Local fetch not OK");
         }
     } catch (err) {
         // If local fetch fails, try to fetch from live URL
-        response = await fetch('https://didix13.github.io/Party-Synergies-Calculator/data.json');
+        response = await fetch("https://didix13.github.io/Party-Synergies-Calculator/data.json");
         if (!response.ok) {
-            throw new Error('Live fetch not OK');
+            throw new Error("Live fetch not OK");
         }
     }
 
@@ -39,8 +39,8 @@ async function fetchData() {
 }
 
 function createCheckboxes(data) {
-    const classForm = document.getElementById('classForm');
-    const ulElement = document.createElement('ul');
+    const classForm = document.getElementById("classForm");
+    const ulElement = document.createElement("ul");
 
     data.forEach(classData => {
         const liElement = createCheckboxElement(classData);
@@ -51,12 +51,12 @@ function createCheckboxes(data) {
 }
 
 function createCheckboxElement(classData) {
-    const liElement = document.createElement('li');
-    const labelElement = document.createElement('label');
-    const checkboxElement = document.createElement('input');
+    const liElement = document.createElement("li");
+    const labelElement = document.createElement("label");
+    const checkboxElement = document.createElement("input");
 
-    checkboxElement.type = 'checkbox';
-    checkboxElement.className = 'classCheckbox';
+    checkboxElement.type = "checkbox";
+    checkboxElement.className = "classCheckbox";
     checkboxElement.value = classData.class;
 
     labelElement.appendChild(checkboxElement);
