@@ -1,0 +1,100 @@
+[
+    {
+        "class": "Berserker",
+        "skills": [
+            {
+                "name": "red dust",
+                "syn": {
+                    "description": "Damage Increase",
+                    "value": 6,
+                    "type": "percentage"
+                },
+                "duration": 6,
+                "uptime": {
+                    "level": "low",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "class": "Shadowhunter",
+        "skills": [
+            {
+                "name": "howl",
+                "syn": {
+                    "description": "Damage Increase",
+                    "value": 6,
+                    "type": "percentage"
+                },
+                "duration": 6,
+                "uptime": {
+                    "level": "low",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "class": "Gunlancer",
+        "skills": [
+            {
+                "name": "shout of hatred",
+                "syn": {
+                    "description": "Front and Back Damange Increase",
+                    "value": 12,
+                    "type": "percentage"
+                },
+                "duration": 12,
+                "uptime": {
+                    "level": "low",
+                    "value": 1
+                }
+            }
+        ]
+    },
+    {
+        "class": "Scrapper",
+        "skills": [
+            {
+                "name": "fierce tiger strike",
+                "syn": {
+                    "description": "Damage Increase",
+                    "value": 6,
+                    "type": "percentage"
+                },
+                "duration": 8,
+                "uptime": {
+                    "level": "high",
+                    "value": 3
+                }
+            },
+            {
+                "name": "crushing strike",
+                "syn": {
+                    "description": "Damage Increase",
+                    "value": 6,
+                    "type": "percentage"
+                },
+                "duration": 8,
+                "uptime": {
+                    "level": "high",
+                    "value": 3
+                }
+            },
+            {
+                "name": "judgement",
+                "syn": {
+                    "description": "Damage Increase",
+                    "value": 6,
+                    "type": "percentage"
+                },
+                "duration": 8,
+                "uptime": {
+                    "level": "high",
+                    "value": 3
+                }
+            }
+        ]
+    }
+]
