@@ -4,35 +4,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const lastUpdated = document.getElementById('lastUpdated');
     lastUpdated.textContent = getFormattedDate();
 
-    fetchClassData()
+    fetchData()
         .then(data => createCheckboxes(data))
         .catch(error => console.error('Fetch error: ', error));
 
 });
 
 function getFormattedDate() {
-    // Utilisez la date actuelle ou remplacez par la date de la dernière mise à jour
     const date = new Date();
-
-    // Tableau des noms des mois
     const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
-
-    // Récupérez le nom du mois
     const monthName = monthNames[date.getMonth()];
-
-    // Formatez la date comme vous le souhaitez
     return `${date.getDate()} ${monthName} ${date.getFullYear()}`;
 }
 
-function fetchClassData() {
-    return fetch("data.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok' + response.statusText);
-            }
-            return response.json();
-        });
+async function fetchData() {
+    let response;
+    
+    try {
+        // Try to fetch local data first
+        response = await fetch('./data.json');
+        if (!response.ok) {
+            throw new Error('Local fetch not OK');
+        }
+    } catch (err) {
+        // If local fetch fails, try to fetch from live URL
+        response = await fetch('https://didix13.github.io/Party-Synergies-Calculator/data.json');
+        if (!response.ok) {
+            throw new Error('Live fetch not OK');
+        }
+    }
+
+    return response.json();
 }
 
 function createCheckboxes(data) {
