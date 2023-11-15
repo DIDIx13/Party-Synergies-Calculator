@@ -2,4 +2,6 @@
 
 Party Synergies Calculator for Lost Ark 
 
-Accessible at : https://didix13.github.io/Party-Synergies-Calculator
+Datas synergies : https://maxroll.gg/lost-ark/resources/party-synergies
+
+Calculator accessible at : https://didix13.github.io/Party-Synergies-Calculator
